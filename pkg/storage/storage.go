@@ -1,17 +1,14 @@
 package storage
 
 type Post struct {
-	ID         int    `json:"id"`
-	AuthorID   int    `json:"author_id"`
-	Title      string `json:"title"`
-	Content    string `json:"content"`
-	AuthorName string `json:"author_name"`
-	CreatedAt  int64  `json:"created_at"`
+	ID      int
+	Title   string
+	Content string
+	PubTime int64
+	Link    string
 }
 
 type Interface interface {
-	Posts() ([]Post, error)
-	AddPost(Post) error
-	UpdatePost(Post) error
-	DeletePost(Post) error
+	Posts(n int) ([]Post, error)
+	StorePosts([]Post) error
 }

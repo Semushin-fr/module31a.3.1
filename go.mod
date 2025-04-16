@@ -4,6 +4,7 @@ go 1.22.2
 
 require (
 	github.com/gorilla/mux v1.8.1
+	github.com/grokify/html-strip-tags-go v0.1.0
 	github.com/jackc/pgx/v4 v4.18.3
 	go.mongodb.org/mongo-driver v1.17.2
 )
